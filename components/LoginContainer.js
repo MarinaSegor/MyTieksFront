@@ -57,8 +57,8 @@ const {width} = Dimensions.get('window');
       /////// Fin animation page login/////////
 
   return (
-<ScrollView>
-<View style={styles.container}>
+    <ScrollView>
+       <View style={styles.container}>
       <Background/>
 
       {/* TITRE */}
@@ -134,7 +134,8 @@ const {width} = Dimensions.get('window');
 
       </Animated.View>
     </View>
-</ScrollView>
+    </ScrollView>
+   
   );
 }
 
