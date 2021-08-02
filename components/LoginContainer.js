@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { StyleSheet, Text, View, Dimensions, Image} from 'react-native';
+import { StyleSheet, Text, View, Dimensions, Image, ScrollView} from 'react-native';
 import Background from './Background';
 
 import InputContainer from './InputContainer';
@@ -57,7 +57,8 @@ const {width} = Dimensions.get('window');
       /////// Fin animation page login/////////
 
   return (
-    <View style={styles.container}>
+    <ScrollView>
+       <View style={styles.container}>
       <Background/>
 
       <View style={{
@@ -129,6 +130,8 @@ const {width} = Dimensions.get('window');
 
       </Animated.View>
     </View>
+    </ScrollView>
+   
   );
 }
 
