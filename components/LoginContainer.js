@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { StyleSheet, Text, View, Dimensions, Image} from 'react-native';
+import { StyleSheet, Text, View, Dimensions, Image, ScrollView} from 'react-native';
 import Background from './Background';
 
 import InputContainer from './InputContainer';
@@ -57,25 +57,29 @@ const {width} = Dimensions.get('window');
       /////// Fin animation page login/////////
 
   return (
-    <View style={styles.container}>
+<ScrollView>
+<View style={styles.container}>
       <Background/>
 
+      {/* TITRE */}
       <View style={{
             justifyContent: 'center', 
             alignItems: 'center', 
-            height: 350, 
-            marginBottom: -120
+            height: 370, 
+            marginBottom: -140,
+            backgroundColor: 'red'
           }}>
 
         <Text style={{
             fontWeight: 'bold', 
-            fontSize: 50
+            fontSize: 50,
+            color: '#fff',
           }}>
-            BONJOUR
+            My Tieks
         </Text>
       </View>
 
-
+    {/* FLECHE RETOUR DU HAUT */}
     <PanGestureHandler {...onbackArrowGestureHandler}>
       <Animated.View style={{
             position: 'absolute', 
@@ -86,19 +90,18 @@ const {width} = Dimensions.get('window');
       </Animated.View>
     </PanGestureHandler>
      
-    
+    {/* IMAGE */}
       <Animated.View 
         style={{
           width: '100%', 
           alignItems: 'center', 
-          // height: 250,
           paddingHorizontal: 25,
           transform: [{scale: scaleAnimation}, {translateY: 40}]
           }}>
         
         <Image 
-          source={require("../assets/signin.png")} 
-          style={{width: 200, height: 100}}/>
+          source={require("../assets/bermuda.png")} 
+          style={{width: 200, height: 130}}/>
       </Animated.View>
 
         <View style={{width, alignItems:'center'}}>
@@ -107,11 +110,13 @@ const {width} = Dimensions.get('window');
           <LogoContainer arrowOpacityAnimation={arrowOpacityAnimation}/>
         </View>
 
+
+      {/* TEXTE DU BAS */}
       <Animated.View style={{
                      flexDirection: 'row', 
                      alignItems: 'flex-end', 
                      opacity: accountOpacity, 
-                     height: 90, 
+                     height: 50, 
                      }}>
 
           <Text style={{fontSize: 12}}>Pas encore de compte?  </Text>
@@ -120,7 +125,7 @@ const {width} = Dimensions.get('window');
           <Animated.Text 
                       style={{
                       fontSize: 14, 
-                      color: '#6070FF', 
+                      color: '#fff', 
                       fontWeight: 'bold'
                       }}>
                       S'enregistrer
@@ -129,13 +134,14 @@ const {width} = Dimensions.get('window');
 
       </Animated.View>
     </View>
+</ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#319E9C',
     alignItems: 'center',
   },
  

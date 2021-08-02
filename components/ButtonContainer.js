@@ -43,7 +43,7 @@ const {width, height} = Dimensions.get('window');
                 opacity: signUpOpacity, 
                 width:'70%',
                 height: 50,
-                backgroundColor: '#3CBAB2', 
+                backgroundColor: '#4E73B9', 
                 elevation: 8,
                 borderRadius: 20,
                 position: 'absolute',
@@ -62,7 +62,7 @@ const {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
         marginTop: 30,
-        height: 50,
+        height: 40,
         width,
         justifyContent: 'flex-start',
         alignItems: 'center'

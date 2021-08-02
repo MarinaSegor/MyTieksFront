@@ -77,9 +77,11 @@ function InputContainer({arrowOpacityAnimation}) {
                         <View style={{flexDirection: 'row'}}>
                             <Feather name="lock" color="black" size={25}/>
                             <TextInput 
-                                placeholder="mot de passe" 
-                                style={{marginLeft: 5, 
-                                fontWeight: 'bold'}}/>
+                                placeholder="mot de passe"
+                                style={{marginLeft: 6, 
+                                fontWeight: 'bold',
+                                flexWrap: 'nowrap',
+                                }}/>
                     
                         </View>
                 

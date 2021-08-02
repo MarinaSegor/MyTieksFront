@@ -9,8 +9,8 @@ const {width, height} = Dimensions.get('window');
     return (
         <View style={[StyleSheet.container,{...StyleSheet.absoluteFill}]}>
             <Svg height="100%" width="100%">
-                <Circle cx="-10" cy="0" r="120" fill="#7BE2DD"/>
-                <Circle cx="440" cy="850" r="120" fill="#3CBAB2"/>
+                <Circle cx="-10" cy="0" r="120" fill="#F0C418"/>
+                <Circle cx="440" cy="850" r="120" fill="#EA482B"/>
             </Svg>
             <Text></Text>
         </View>
